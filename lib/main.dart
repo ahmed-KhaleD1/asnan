@@ -1,3 +1,4 @@
+import 'package:asnan/core/utils/app_route.dart';
 import 'package:asnan/features/splash/presentation/view/splash_view.dart';
 import 'package:asnan/localization/localization.dart';
 import 'package:asnan/localization/localization_controller.dart';
@@ -22,7 +23,8 @@ class AsnanApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: controller.inialLanguage,
       translations: Localization(),
-      home: const SplashView(),
+      initialRoute: '/',
+      getPages: AppRoute.appRoute,
     );
   }
 }

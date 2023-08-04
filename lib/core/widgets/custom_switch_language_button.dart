@@ -1,4 +1,3 @@
-import 'package:asnan/core/utils/assets_data.dart';
 import 'package:asnan/localization/localization_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,7 +17,7 @@ class CustomSwitchLanguageButton extends StatelessWidget {
       ),
       onPressed: () {
         controller
-            .changeLanguage(Get.locale == const Locale('ar') ? 'en' : 'ar');
+            .changeLanguage(controller.isEnglishSelected.value ? 'ar' : 'en');
       },
     );
   }

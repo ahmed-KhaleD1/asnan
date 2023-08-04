@@ -8,24 +8,32 @@ class SplashViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: CustomAppBar(),
-        ),
-        const Spacer(
-          flex: 1,
-        ),
-        Container(
-            width: MediaQuery.of(context).size.width * 0.35,
-            child: AspectRatio(
-                aspectRatio: 1, child: Image.asset(AssetsData.asnanLogo))),
-        const Spacer(
-          flex: 6,
-        ),
-        const ReserationButton(),
-        const Spacer()
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: CustomAppBar(),
+              ),
+              const Spacer(
+                flex: 1,
+              ),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.35,
+                  child: AspectRatio(
+                      aspectRatio: 1,
+                      child: Image.asset(AssetsData.asnanLogo))),
+              const Spacer(
+                flex: 6,
+              ),
+              const ReservationButton(),
+              const Spacer()
+            ],
+          ),
+        )
       ],
     );
   }

@@ -1,4 +1,4 @@
-import 'package:asnan/core/utils/custom_switch_language_button.dart';
+import 'package:asnan/core/widgets/custom_switch_language_button.dart';
 import 'package:asnan/features/splash/presentation/view/widgets/dentist_login_button.dart';
 import 'package:flutter/material.dart';
 
